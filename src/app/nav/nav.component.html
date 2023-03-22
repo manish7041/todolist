@@ -1,0 +1,18 @@
+<div class="d-flex flex-row p-1 flex-md-column my-5 navmenu1">
+    <div class="my-1 d-flex flex-md-row  align-items-center navmenu" *ngFor="let e of nav" (click)="SendNavValue(myVariable)">
+            <img #myVariable style="height:20px;" src={{e.circle}}>
+            <h5 style="font-family:monospace;font-size:14px;">{{e.h}}</h5>
+    </div>
+
+    <div class=" d-flex searchHide  flex-row flex-sm-column ">
+        <div class="mx-3  my-3">
+            <input class="search" type="text" placeholder="Search Task" [(ngModel)]="searchTaskValue" (input)="searchTask()">
+        </div>
+
+        <div class="d-flex radio  my-2 align-items-center">
+            <input #hide type="checkbox" class="hide" id="allcheck" (change)="hideDoneTask(hide)">
+            <label for="allcheck">Hide task</label>
+        </div>
+    </div> 
+
+</div>
